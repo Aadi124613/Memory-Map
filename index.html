@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Map</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+
+    <header>
+        <h1>🌎 Memory Map</h1>
+        <div class="header-buttons">
+            <input type="text" id="searchInput" placeholder="Search Memories...">
+            <button id="addMemoryBtn">➕ Add Memory</button>
+            <button id="darkModeBtn">🌙 Dark Mode</button>
+        </div>
+    </header>
+
+    <div id="map"></div>
+
+    <div id="memoryForm" class="hidden">
+        <h2>Add a Memory</h2>
+        <input type="text" id="title" placeholder="Memory Title" required>
+        <textarea id="description" placeholder="Memory Description" required></textarea>
+        <input type="text" id="lat" placeholder="Latitude" required>
+        <input type="text" id="lng" placeholder="Longitude" required>
+        <input type="file" id="photo" accept="image/*">
+        <button id="saveMemory">Save Memory</button>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
